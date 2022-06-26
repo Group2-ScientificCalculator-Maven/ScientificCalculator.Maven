@@ -39,8 +39,3 @@ public class Console {
         return value;
     }
 
-    /*public static double cos(double numberA) {
-        return Math.cos(numberA);
-    }*/
-}
-
