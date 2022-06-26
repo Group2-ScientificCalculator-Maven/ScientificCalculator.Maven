@@ -21,12 +21,13 @@ public class MainApplication {
         int selection;
         String choice = "yes";
         String clear = "Current Display: ERR";
+        String memory = "Memory";
 
 
 
         while (choice.equals("yes")) {
 
-            System.out.println("Please center your selection");
+            System.out.println("Please enter your selection.");
             System.out.println("0. CLEAR display");
             System.out.println("1. Addition 2. Subtraction 3. Multiplication 4. Division");
             System.out.println("5. Square 6. Exponential 7. SquareRoot 8. Inverse 9. Inversion");
