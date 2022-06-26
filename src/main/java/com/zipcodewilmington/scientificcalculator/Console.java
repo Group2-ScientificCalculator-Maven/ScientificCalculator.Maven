@@ -29,4 +29,9 @@ public class Console {
     public static Double getDoubleInput(String prompt) {
         return null;
     }
+
+    /*public static double cos(double numberA) {
+        return Math.cos(numberA);
+    }*/
 }
+
