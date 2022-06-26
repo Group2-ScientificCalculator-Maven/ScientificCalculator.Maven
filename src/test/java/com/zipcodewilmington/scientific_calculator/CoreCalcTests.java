@@ -62,15 +62,15 @@ public class CoreCalcTests {
         Assert.assertEquals(expectedResult, result, 0.01);
     }
 
-//    @Test
-//    public void testExponential() {
-//        int num1 = 4; int num2 = 2;
-//        int expectedResult = 16;
-//        //Act
-//        double result = objCoreCalcTest.exponential(num1, num2);
-//        //Assert
-//        Assert.assertEquals(expectedResult, result, 0.01);
-//        }
+    @Test
+    public void testExponential() {
+        int num1 = 4; int num2 = 2;
+        int expectedResult = 16;
+        //Act
+        double result = objCoreCalcTest.exponential(num1, num2);
+        //Assert
+        Assert.assertEquals(expectedResult, result, 0.01);
+        }
 
     }
 
