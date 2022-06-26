@@ -36,10 +36,9 @@ public class MainApplication {
 
 
         while (choice.equals("yes")) {
-            System.out.println("Please enter your first number:");
-            num1 = scanner.nextDouble();
-            System.out.println("Please enter your second number:");
-            num2 = scanner.nextDouble();
+
+            num1 = Console.getDoubleInput("Please enter your first number:");
+            num2 = Console.getDoubleInput("Please enter your second number:");
 
             System.out.println("Please center your selection");
             System.out.println("0. CLEAR display");
@@ -66,6 +65,28 @@ public class MainApplication {
                     break;
                 case 3:
                     System.out.println(calc1.multiplication(num1,num2));
+                    break;
+                case 4:
+                    if (num2==0){
+                        System.out.println("ERR");
+                    } else {
+                        System.out.println(calc1.division(num1, num2));
+                    }
+                    break;
+                case 5:
+                    System.out.println(calc1.square(num1));
+                    break;
+                case 6:
+                    System.out.println(calc1.exponential(num1, num2));
+                    break;
+                case 7:
+                    System.out.println(calc1.squareRoot(num1));
+                    break;
+                case 8:
+                    System.out.println(calc1.inverse(num1));
+                    break;
+                case 9:
+                    System.out.println(calc1.invert(num1));
                     break;
                 default:
                     System.out.println("Yikes, no match exist.");
