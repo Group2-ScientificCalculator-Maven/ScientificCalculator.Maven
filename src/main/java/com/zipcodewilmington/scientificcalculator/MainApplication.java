@@ -19,14 +19,12 @@ public class MainApplication {
         Scanner scanner =new Scanner(System.in);
         double num1,num2;
         int selection;
-        String choice;
-        choice = "yes";
+        String choice = "yes";
+        String clear = "Current Display: ERR";
+
 
 
         while (choice.equals("yes")) {
-
-            num1 = Console.getDoubleInput("Please enter your first number:");
-            num2 = Console.getDoubleInput("Please enter your second number:");
 
             System.out.println("Please center your selection");
             System.out.println("0. CLEAR display");
@@ -38,15 +36,27 @@ public class MainApplication {
             System.out.println("13. ");
             System.out.println("20. M+ Add Current Displayed Value to Memory");
             System.out.println("21. MCR - Recall Current Value from Memory");
-            System.out.println("21. MC - Recall Current Value from Memory");
+            System.out.println("22. MC - Recall Current Value from Memory");
             System.out.println("15. Change Display, Clear Display");
 
             selection = scanner.nextInt();
+
+            num1 = Console.getDoubleInput("Please enter your first number:");
+            num2 = Console.getDoubleInput("Please enter your second number:");
+
+
 
             double answer;
             switch(selection){
                 //The selection entered correlates to the case number.
                 // If selection is 1, then the method under case 1 will run.
+                case 0:
+
+                    currentDisplay = String.valueOf(0.0);
+                    System.out.println("Current Display: " + currentDisplay);
+                    //String.valueOf -> It turns your parameter into a String.
+
+                    break;
                 case 1:
 
                     answer = calc1.addition(num1,num2);
@@ -62,13 +72,34 @@ public class MainApplication {
                     break;
                 case 3:
                     //need to  continue to change the method for the rest to above's.
-                    System.out.println(calc1.multiplication(num1,num2));
+                    answer = calc1.multiplication(num1,num2);
+                    currentDisplay = String.valueOf(answer);
+                    System.out.println("Current Display: " + currentDisplay);
                     break;
                 case 4:
+
                     if (num2==0){
-                        System.out.println("ERR");
+                        currentDisplay = "ERR";
+                        System.out.println("Current Display: " + currentDisplay);
                     } else {
-                        System.out.println(calc1.division(num1, num2));
+                        answer = calc1.division(num1,num2);
+                        currentDisplay = String.valueOf(answer);
+                        System.out.println("Current Display: " + currentDisplay);
+                    }
+
+                    switch(clear){
+                        case "Current Display: ERR":
+                            System.out.println("Type 'clear' to clear ERR");
+//                            String clear;
+                            clear = scanner.next();
+
+                            switch (clear){
+                                case "clear":
+                                    currentDisplay = String.valueOf(0.0);
+                                    System.out.println("Current Display: " + currentDisplay);
+                                break;
+                            }
+                        break;
                     }
                     break;
                 case 5:
