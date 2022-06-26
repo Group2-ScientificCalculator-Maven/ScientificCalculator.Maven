@@ -27,7 +27,16 @@ public class Console {
     }
 
     public static Double getDoubleInput(String prompt) {
-        return null;
+        //This method is for making sure NextDouble is a number.
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(prompt);
+        double value;
+        while (!scanner.hasNextDouble()) {
+            System.out.println("Not a valid number. \n");
+            scanner.nextLine();
+        }
+        value = scanner.nextDouble();
+        return value;
     }
 
     /*public static double cos(double numberA) {
