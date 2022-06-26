@@ -9,24 +9,12 @@ import java.util.Scanner;
  */
 public class MainApplication {
     public static void main(String[] args) {
-        System.out.println("Welcome to my calculator!");
-        System.out.println("Display Value:");
+        System.out.println("Welcome to Group 2's calculator!");
 
-        double Display;
-
-
-
-
-//        String s = Console.getStringInput("Enter a string");
-//        Integer i = Console.getIntegerInput("Enter an integer");
-//        Double d = Console.getDoubleInput("Enter a double.");
-//
-//        Console.println("The user input %s as a string", s);
-//        Console.println("The user input %s as a integer", i);
-//        Console.println("The user input %s as a d", d);
+        String currentDisplay = String.valueOf(0.0);
+        System.out.println("Current Display: " + currentDisplay);
 
         CoreCalc calc1 = new CoreCalc();
-//        System.out.println(calc1.addition(3,4));
 
         Scanner scanner =new Scanner(System.in);
         double num1,num2;
@@ -42,28 +30,38 @@ public class MainApplication {
 
             System.out.println("Please center your selection");
             System.out.println("0. CLEAR display");
-            System.out.println("1. Addition 2. Subtraction");
-            System.out.println("3. Multiplication 4. Division");
-            System.out.println("5. Square 6. Exponential 7. SquareRoot");
-            System.out.println("8. Inverse 9. Inversion");
+            System.out.println("1. Addition 2. Subtraction 3. Multiplication 4. Division");
+            System.out.println("5. Square 6. Exponential 7. SquareRoot 8. Inverse 9. Inversion");
             System.out.println("10. ");
             System.out.println("11. ");
             System.out.println("12. ");
             System.out.println("13. ");
-            System.out.println("14. Current, Clear, Recall");
-            System.out.println("15. Current Display, Clear Display");
+            System.out.println("20. M+ Add Current Displayed Value to Memory");
+            System.out.println("21. MCR - Recall Current Value from Memory");
+            System.out.println("21. MC - Recall Current Value from Memory");
+            System.out.println("15. Change Display, Clear Display");
 
             selection = scanner.nextInt();
 
-
+            double answer;
             switch(selection){
+                //The selection entered correlates to the case number.
+                // If selection is 1, then the method under case 1 will run.
                 case 1:
-                    System.out.println(calc1.addition(num1,num2));
+
+                    answer = calc1.addition(num1,num2);
+                    currentDisplay = String.valueOf(answer);
+                    System.out.println("Current Display: " + currentDisplay);
+                    //String.valueOf -> It turns your parameter into a String.
+
                     break;
                 case 2:
-                    System.out.println(calc1.subtraction(num1,num2));
+                    answer = calc1.subtraction(num1,num2);
+                    currentDisplay = String.valueOf(answer);
+                    System.out.println("Current Display: " + currentDisplay);
                     break;
                 case 3:
+                    //need to  continue to change the method for the rest to above's.
                     System.out.println(calc1.multiplication(num1,num2));
                     break;
                 case 4:
@@ -88,6 +86,12 @@ public class MainApplication {
                 case 9:
                     System.out.println(calc1.invert(num1));
                     break;
+                case 10:
+                    System.out.println("Current Display: " + currentDisplay);
+                    break;
+                case 11:
+//                    System.out.println("Current Display: " + currentDisplay);
+                    break;
                 default:
                     System.out.println("Yikes, no match exist.");
 
@@ -97,10 +101,6 @@ public class MainApplication {
 
             choice = scanner.next();
 
-
-
-
-//            break; //to end while loop
 
         }
     }
