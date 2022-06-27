@@ -35,17 +35,6 @@ public class Scientific {
         return Math.atan(z);
     }
 
-
-       public static void main(String[] args) {
-    JFrame frame = new JFrame();
-      frame.setSize(800, 600);
-              frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-              GraphicsDevice graphics = GraphicsEnvironment.getLocalGraphicsEnvironment()
-              .getDefaultScreenDevice();
-              graphics.setFullScreenWindow(frame);
-              graphics.setDisplayMode(new DisplayMode(800, 600, 32, 60));
-              frame.setVisible(true);
-              }
 }
 
 
