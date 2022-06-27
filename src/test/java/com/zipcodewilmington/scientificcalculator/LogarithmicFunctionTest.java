@@ -14,8 +14,8 @@ class LogarithmicFunctionTest {
 
     @Test
     public void testLog() {
-        int num1 = 10;
-        int expectedResult = 1;
+        double num1 = 10;
+        double expectedResult = 1;
         //Ask
         double result = objLogarithmicfunction.log(num1);
         //Assert
@@ -33,18 +33,18 @@ class LogarithmicFunctionTest {
     }
 
     @Test
-    public void testLog1p() {
-        int num1 = 9;
-        double expectedResult = 2.302585092994046;
+    public void testInverseLn() {
+        int num1 = 2;
+        double expectedResult = 7.38905609893;
         //Ask
-        double result = objLogarithmicfunction.log1p(num1);
+        double result = objLogarithmicfunction.inverseLn(num1);
         //Assert
-        Assert.assertEquals(expectedResult, result, 0.01d);]
+        Assert.assertEquals(expectedResult, result, 0.01d);
     }
 
     @Test
     public void testE() {
-        int num1 = 1;
+        double num1 = 1;
         double expectedResult = 2.71828182846;
         //Ask
         double result = objLogarithmicfunction.e(num1);

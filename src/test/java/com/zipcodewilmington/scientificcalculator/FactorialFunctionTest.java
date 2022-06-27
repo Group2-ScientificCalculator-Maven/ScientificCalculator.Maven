@@ -4,10 +4,8 @@ import org.junit.Before;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-class FactorialFunctionTest {
-
+public class FactorialFunctionTest {
     private FactorialFunction objFactorialFunction;
-
     @Before
     public void setUp() {
         objFactorialFunction = new FactorialFunction();
