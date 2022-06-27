@@ -136,24 +136,27 @@ public class MainApplication {
                 case 15: //inverse tangent
                     break;
                 case 20: //log
-                    answer = Scientific.log10(num1);
+                    answer = LogarithmicFunction.log10(num1);
                     currentDisplay = String.valueOf(answer);
                     System.out.println("Current Display: " + currentDisplay);
                     break;
                 case 21: //inverse log
-                    answer = Scientific.e(num1);
+                    answer = LogarithmicFunction.log10(num1);
                     currentDisplay = String.valueOf(answer);
                     System.out.println("Current Display: " + currentDisplay);
                     break;
                 case 22: //natural log
+                    answer = LogarithmicFunction.naturalLog(num1);
+                    currentDisplay = String.valueOf(answer);
+                    System.out.println("Current Display: " + currentDisplay);
                     break;
                 case 23: //inverse natural log
-                    answer = Scientific.inverseLN(num1);
+                    answer = LogarithmicFunction.inverseLn(num1);
                     currentDisplay = String.valueOf(answer);
                     System.out.println("Current Display: " + currentDisplay);
                     break;
                 case 24://factorial
-                    answer = Scientific.factorial(num1);
+                    answer = FactorialFunction.factorial(num1);
                     currentDisplay = String.valueOf(answer);
                     System.out.println("Current Display: " + currentDisplay);
                 case 25:

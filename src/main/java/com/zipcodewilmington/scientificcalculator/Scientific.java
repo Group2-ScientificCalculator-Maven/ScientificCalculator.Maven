@@ -20,10 +20,6 @@ public class Scientific {
         return Math.tan(numC);
     }
 
-/*public static double acos(String[] args){
-                double numD = 0.6;
-                return Math.acos(numD);{
-            }*/
 
     public double acos(double x) {
         return Math.acos(x);
