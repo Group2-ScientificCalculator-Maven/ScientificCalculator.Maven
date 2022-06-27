@@ -13,12 +13,12 @@ public class FactorialFunctionTest {
 
     @Test
     void testFactorial() {
-        int num1 = 5;
-        int expectedResult = 120;
+        double num1 = 5;
+        double expectedResult = 120;
         //Ask
-        int result = objFactorialFunction.factorial(num1);
+        double result = objFactorialFunction.factorial(num1);
         //Assert
-        Assert.assertEquals(expectedResult, result);
+        Assert.assertEquals(expectedResult, result, 0.01d);
     }
 
 }

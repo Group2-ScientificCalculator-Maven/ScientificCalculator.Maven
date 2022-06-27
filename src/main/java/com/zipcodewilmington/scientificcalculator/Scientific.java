@@ -6,32 +6,32 @@ import java.awt.GraphicsEnvironment;
 import javax.swing.JFrame;
 
 public class Scientific {
-    public double cos(double numA) {
+    public static double cos(double numA) {
         return Math.cos(numA);
     }
 
-    public double sin(double numB) {
+    public static double sin(double numB) {
 
         return Math.sin(numB);
     }
 
-    public double tan(double numC) {
+    public static double tan(double numC) {
 
         return Math.tan(numC);
     }
 
 
-    public double acos(double x) {
+    public static double acos(double x) {
         return Math.acos(x);
     }
 
 
-    public double asin( double y) {
+    public static double asin( double y) {
         return Math.asin(y);
     }
 
 
-    public double atan(double z) {
+    public static double atan(double z) {
         return Math.atan(z);
     }
 

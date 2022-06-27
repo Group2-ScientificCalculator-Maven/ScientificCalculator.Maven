@@ -39,7 +39,7 @@ public class MainApplication {
             System.out.println("26-M+ to Add Current Display Value to Memory");
             System.out.println("27-MCR to Recall Current Value from Memory");
             System.out.println("28-Get Current Date and Time");
-            System.out.println("29-Something Fun"); //Lloyd will work on this.
+            System.out.println("29-HELLO)");
 
             selection = scanner.nextInt();
 
@@ -124,24 +124,42 @@ public class MainApplication {
                     System.out.println("Current Display: " + currentDisplay);
                     break;
                 case 10: //sine
+                    answer = Scientific.sin(num1);
+                    currentDisplay = String.valueOf(answer);
+                    System.out.println("Current Display: " + currentDisplay);
                     break;
                 case 11: //cosine
+                    answer = Scientific.cos(num1);
+                    currentDisplay = String.valueOf(answer);
+                    System.out.println("Current Display: " + currentDisplay);
                     break;
                 case 12: //tangent
+                    answer = Scientific.tan(num1);
+                    currentDisplay = String.valueOf(answer);
+                    System.out.println("Current Display: " + currentDisplay);
                     break;
                 case 13: //inverse sine
+                    answer = Scientific.asin(num1);
+                    currentDisplay = String.valueOf(answer);
+                    System.out.println("Current Display: " + currentDisplay);
                     break;
                 case 14: //inverse cosine
+                    answer = Scientific.acos(num1);
+                    currentDisplay = String.valueOf(answer);
+                    System.out.println("Current Display: " + currentDisplay);
                     break;
                 case 15: //inverse tangent
+                    answer = Scientific.atan(num1);
+                    currentDisplay = String.valueOf(answer);
+                    System.out.println("Current Display: " + currentDisplay);
                     break;
                 case 20: //log
-                    answer = LogarithmicFunction.log10(num1);
+                    answer = LogarithmicFunction.Log(num1, num2);
                     currentDisplay = String.valueOf(answer);
                     System.out.println("Current Display: " + currentDisplay);
                     break;
                 case 21: //inverse log
-                    answer = LogarithmicFunction.log10(num1);
+                    answer = LogarithmicFunction.inverseLog(num1);
                     currentDisplay = String.valueOf(answer);
                     System.out.println("Current Display: " + currentDisplay);
                     break;
@@ -176,9 +194,15 @@ public class MainApplication {
                     System.out.println("Current Display: " + timeFormat.format(LocalDateTime.now()));
                     break;
 
-//                case 29:
-//                    Lloyd's fun thing
-//                    break;
+                case 29://HELLO
+                    System.out.println("----------------------------------------------------------------------------------");
+                    System.out.println("--------|   |  |   |---|    _____|---|   |----------|   |---------|        |------");
+                    System.out.println("--------|   |__|   |---|   |---------|   |----------|   |---------|   ||   |------");
+                    System.out.println("--------|    __    |---|    ___|-----|   |----------|   |---------|   ||   |------");
+                    System.out.println("--------|   |  |   |---|   |---------|   |______----|   |______---|   ||   |------");
+                    System.out.println("--------|   |  |   |---|    -----|---|          |---|         |---|        |------");
+                    System.out.println("=---------------------------------------------------------------------------------");
+                    break;
 
                 default:
                     System.out.println("Yikes, no match exist.");
