@@ -8,7 +8,7 @@ public class LogarithmicFunction {
     }
     public double log10(double num1) {
         return Math.log10(num1);
-        //This is Log10
+        //This is Inverse Log
     }
     public double inverseLn(double num1) {
         return Math.exp(num1);
