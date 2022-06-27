@@ -14,28 +14,29 @@ class LogarithmicFunctionTest {
 
     @Test
     public void testLog() {
-        double num1 = 10;
-        double expectedResult = 1;
+        double num1 = 3;
+        double num2 = 81;
+        double expectedResult = 4;
         //Ask
-        double result = objLogarithmicfunction.log(num1);
+        double result = objLogarithmicfunction.Log(num1, num2);
         //Assert
         Assert.assertEquals(expectedResult, result, 0.01d);
     }
 
     @Test
-    public void testLog10() {
+    public void testInverseLog() {
         int num1 = 1000;
         int expectedResult = 3;
         //Ask
-        double result = objLogarithmicfunction.log10(num1);
+        double result = objLogarithmicfunction.inverseLog(num1);
         //Assert
         Assert.assertEquals(expectedResult, result, 0.01d);
     }
 
     @Test
     public void testInverseLn() {
-        int num1 = 2;
-        double expectedResult = 7.38905609893;
+        int num1 = 0;
+        double expectedResult = 1;
         //Ask
         double result = objLogarithmicfunction.inverseLn(num1);
         //Assert
@@ -43,11 +44,11 @@ class LogarithmicFunctionTest {
     }
 
     @Test
-    public void testE() {
+    public void testNaturalLog() {
         double num1 = 1;
-        double expectedResult = 2.71828182846;
+        double expectedResult = 0;
         //Ask
-        double result = objLogarithmicfunction.e(num1);
+        double result = objLogarithmicfunction.naturalLog(num1);
         //Assert
         Assert.assertEquals(expectedResult, result, 0.01d);
     }
