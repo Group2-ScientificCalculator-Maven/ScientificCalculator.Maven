@@ -39,7 +39,7 @@ public class MainApplication {
             System.out.println("26-M+ to Add Current Display Value to Memory");
             System.out.println("27-MCR to Recall Current Value from Memory");
             System.out.println("28-Get Current Date and Time");
-            System.out.println("29-HELLO)");
+            System.out.println("29-HELLO");
 
             selection = scanner.nextInt();
 
