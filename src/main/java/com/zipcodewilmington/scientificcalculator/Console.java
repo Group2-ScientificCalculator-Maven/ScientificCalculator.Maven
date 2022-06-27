@@ -39,4 +39,3 @@ public class Console {
         return value;
     }
 }
-

@@ -67,7 +67,7 @@ Each operation should automatically update the display
 
 ### Custom Features
 
-In addition to the Core and Scientific features, you are required to create at least two of your own features for the calculator. They can be any two features that are not already covered and that you can implement as you see fit. These features must be properly tested.
+In addition to the Core and Scientific features, you are required to create at least two of your own featurIn addition to the Core and Scientific features, you are required to create at least two of your own features fes for the calculator. They can be any two features that are not already covered and that you can implement as you see fit. These features must be properly tested.
 
 ### Hints
 
