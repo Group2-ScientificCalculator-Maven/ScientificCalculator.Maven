@@ -38,4 +38,5 @@ public class Console {
         value = scanner.nextDouble();
         return value;
     }
+}
 
