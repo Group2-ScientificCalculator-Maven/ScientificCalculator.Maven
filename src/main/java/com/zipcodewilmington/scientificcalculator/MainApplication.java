@@ -1,9 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
 
-import java.awt.*;
 import java.time.LocalDateTime;
-import java.time.chrono.ChronoLocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
@@ -16,7 +14,7 @@ public class MainApplication {
         System.out.println("Welcome to Group 2's calculator!");
 
         String currentDisplay = String.valueOf(0.0);
-        System.out.println("Current Display: " + currentDisplay);
+        System.out.println("Current Display: " + currentDisplay + "\n");
 
         CoreCalc calc1 = new CoreCalc();
         Scanner scanner =new Scanner(System.in);
@@ -25,31 +23,30 @@ public class MainApplication {
         int selection;
         String choice = "yes";
         String clear = "Current Display: ERR";
-        String memory = "Memory";
-
+        String memory = "0.0";
 
 
         while (choice.equals("yes")) {
 
             System.out.println("Please enter your selection.");
-            System.out.println("0. CLEAR display");
-            System.out.println("1. Addition 2. Subtraction 3. Multiplication 4. Division");
-            System.out.println("5. Square 6. Exponential 7. SquareRoot 8. Inverse 9. Inversion");
-            System.out.println("10. ");
-            System.out.println("11. ");
-            System.out.println("12. ");
-            System.out.println("13. ");
-            System.out.println("20. M+ Add Current Displayed Value to Memory");
-            System.out.println("21. MCR - Recall Current Value from Memory");
-            System.out.println("22. MC - Recall Current Value from Memory");
-            System.out.println("30. Get Current Time");
-            System.out.println("31. Something Fun"); //Lloyd will work on this.
+            System.out.println("0-CLEAR display");
+            System.out.println("1-Addition 2-Subtraction 3-Multiplication 4-Division");
+            System.out.println("5-Square 6-Exponential 7-SquareRoot 8-Inverse 9-Inversion");
+            System.out.println("10-Sine 11-Cosine 12-Tangent");
+            System.out.println("13-Inverse Sine 14-Inverse Cosine 15-Inverse Tangent");
+            System.out.println("20-Log 21-Inverse Log 22-Natural Log 23-Inverse LN 24-Factorial");
+            System.out.println("25-MC for Reset Memory");
+            System.out.println("26-M+ to Add Current Display Value to Memory");
+            System.out.println("27-MCR to Recall Current Value from Memory");
+            System.out.println("28-Get Current Date and Time");
+            System.out.println("29-Something Fun"); //Lloyd will work on this.
 
             selection = scanner.nextInt();
 
-            if(selection!=30) {
+            if(selection!=0 && selection<25) {
+                //runs following prompt if selection is not 0 or greater than 25
                 num1 = Console.getDoubleInput("Please enter your first number:");
-                num2 = Console.getDoubleInput("Please enter your second number:");
+                num2 = Console.getDoubleInput("Please enter your second number:\nIf no second number is needed, enter '0'");
             }
 
             double answer;
@@ -57,19 +54,15 @@ public class MainApplication {
                 //The selection entered correlates to the case number.
                 // If selection is 1, then the method under case 1 will run.
                 case 0:
-
                     currentDisplay = String.valueOf(0.0);
                     System.out.println("Current Display: " + currentDisplay);
                     //String.valueOf -> It turns your parameter into a String.
-
                     break;
                 case 1:
-
                     answer = calc1.addition(num1,num2);
                     currentDisplay = String.valueOf(answer);
                     System.out.println("Current Display: " + currentDisplay);
                     //String.valueOf -> It turns your parameter into a String.
-
                     break;
                 case 2:
                     answer = calc1.subtraction(num1,num2);
@@ -83,7 +76,6 @@ public class MainApplication {
                     System.out.println("Current Display: " + currentDisplay);
                     break;
                 case 4:
-
                     if (num2==0){
                         currentDisplay = "ERR";
                         System.out.println("Current Display: " + currentDisplay);
@@ -92,11 +84,9 @@ public class MainApplication {
                         currentDisplay = String.valueOf(answer);
                         System.out.println("Current Display: " + currentDisplay);
                     }
-
                     switch(clear){
                         case "Current Display: ERR":
                             System.out.println("Type 'clear' to clear ERR");
-//                            String clear;
                             clear = scanner.next();
 
                             switch (clear){
@@ -133,17 +123,58 @@ public class MainApplication {
                     currentDisplay = String.valueOf(answer);
                     System.out.println("Current Display: " + currentDisplay);
                     break;
-                case 10:
-
-
+                case 10: //sine
                     break;
-                case 30:
+                case 11: //cosine
+                    break;
+                case 12: //tangent
+                    break;
+                case 13: //inverse sine
+                    break;
+                case 14: //inverse cosine
+                    break;
+                case 15: //inverse tangent
+                    break;
+                case 20: //log
+                    answer = Scientific.log10(num1);
+                    currentDisplay = String.valueOf(answer);
+                    System.out.println("Current Display: " + currentDisplay);
+                    break;
+                case 21: //inverse log
+                    answer = Scientific.e(num1);
+                    currentDisplay = String.valueOf(answer);
+                    System.out.println("Current Display: " + currentDisplay);
+                    break;
+                case 22: //natural log
+                    break;
+                case 23: //inverse natural log
+                    answer = Scientific.inverseLN(num1);
+                    currentDisplay = String.valueOf(answer);
+                    System.out.println("Current Display: " + currentDisplay);
+                    break;
+                case 24://factorial
+                    answer = Scientific.factorial(num1);
+                    currentDisplay = String.valueOf(answer);
+                    System.out.println("Current Display: " + currentDisplay);
+                case 25:
+                    memory = String.valueOf(0.0);
+                    System.out.println("Memory reset to " + memory);
+                    //String.valueOf -> It turns your parameter into a String.
+                    break;
+                case 26:
+                    memory = currentDisplay;
+                    System.out.println("Stored to Memory: " + memory);
+                    break;
+                case 27:
+                    System.out.println("Previous Stored Memory: " + memory);
+                    break;
+                case 28: //get current date and time
                     DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
                     System.out.println("Current Display: " + timeFormat.format(LocalDateTime.now()));
                     break;
 
-//                case 31:
-//                    System.out.println("Current Display: " + currentDisplay);
+//                case 29:
+//                    Lloyd's fun thing
 //                    break;
 
                 default:
