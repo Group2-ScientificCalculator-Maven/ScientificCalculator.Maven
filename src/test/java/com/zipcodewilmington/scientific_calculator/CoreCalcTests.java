@@ -71,6 +71,35 @@ public class CoreCalcTests {
         //Assert
         Assert.assertEquals(expectedResult, result, 0.01);
         }
+        @Test
+    public void testSquareRoot(){
+        int num1 = 9;
+        int expectedResult = 3;
+        //Act
+            double result = objCoreCalcTest.squareRoot(num1);
+            //Assert
+            Assert.assertEquals(expectedResult, result, 0.01d);
+        }
+
+        @Test
+    public void testInverse() {
+        int num1 = 100;
+        double expectedResult = 0.01;
+        //Act
+            double result = objCoreCalcTest.inverse(num1);
+            //Assert
+            Assert.assertEquals(expectedResult, result, 0.01d);
+        }
+
+        @Test
+        public void testInvert() {
+        int num1 = 10;
+        double expectedResult = -10;
+        //Act
+            double result = objCoreCalcTest.invert(num1);
+            //Assert
+            Assert.assertEquals(expectedResult, result, 0.01);
+        }
 
     }
 
